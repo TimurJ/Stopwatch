@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "SF-Pro";
+    src: url(SF-Pro-Text-Ultralight.otf);
+}
+
+body{
+    background-color: black;
+    width: auto;
+    height: auto;
+}
+#time{
+    color: white;
+    font-size: 140px;
+    font-family: "SF-Pro";
+    margin-top: 250px;
+    margin-left: 100px;
+}
+
+button{
+    font-size: 24px;
+    font-family: "SF-Pro";
+    font-weight: bold;
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+}
+
+.buttons{
+    margin-top: 180px;
+    text-align: center;
+}
+
+#startStop{
+    background-color: rgba(0, 255, 0, 0.2);
+    color: rgb(0, 255, 0);
+    margin-left: 350px;
+    border: 0;
+}
+
+#resetLap{
+    background-color: rgba(153, 153, 153, 0.3);
+    color: rgb(255, 255, 255);
+    border: 0;
+}
+
+#lapTimes{
+    color: white;
+    font-family: "SF-Pro";
+    font-size: 26px;
+    margin-top: 20px;
+    margin-left: 360px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+}
+
+#lapNum{
+    display: inline-block;
+    color: white;
+    font-family: "SF-Pro";
+    font-size: 26px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+li{
+    margin-top: 40px;
+    list-style-type: none;
+}
+
+li:first-child{
+    margin-top: 0px;
+}
