@@ -1,74 +1,70 @@
 @font-face {
-    font-family: "SF-Pro";
-    src: url(SF-Pro-Text-Ultralight.otf);
+  font-family: "SF-Pro";
+  src: url(SF-Pro-Text-Ultralight.otf);
 }
 
-body{
-    background-color: black;
-    width: auto;
-    height: auto;
-}
-#time{
-    color: white;
-    font-size: 140px;
-    font-family: "SF-Pro";
-    margin-top: 250px;
-    margin-left: 100px;
+:root {
+  --start-color: rgba(0, 255, 0, 0.2);
+  --text-color: rgb(255, 255, 255);
 }
 
-button{
-    font-size: 24px;
-    font-family: "SF-Pro";
-    font-weight: bold;
-    border-radius: 50%;
-    height: 130px;
-    width: 130px;
+body {
+  background-color: black;
+  width: 700px;
+  height: 1300px;
+  border: solid 1px white;
 }
 
-.buttons{
-    margin-top: 180px;
-    text-align: center;
+span {
+  display: inline-block;
 }
 
-#startStop{
-    background-color: rgba(0, 255, 0, 0.2);
-    color: rgb(0, 255, 0);
-    margin-left: 350px;
-    border: 0;
+#time {
+  color: var(--text-color);
+  font-size: 140px;
+  font-family: "SF-Pro";
+  font-variant-numeric: tabular-nums;
+  margin-top: 250px;
+  text-align: center;
 }
 
-#resetLap{
-    background-color: rgba(153, 153, 153, 0.3);
-    color: rgb(255, 255, 255);
-    border: 0;
+button {
+  font-size: 24px;
+  font-family: "SF-Pro";
+  font-weight: bold;
+  border-radius: 50%;
+  height: 145px;
+  width: 145px;
 }
 
-#lapTimes{
-    color: white;
-    font-family: "SF-Pro";
-    font-size: 26px;
-    margin-top: 20px;
-    margin-left: 360px;
-    font-weight: bold;
-    display: inline-block;
-    text-align: center;
+.buttons {
+  margin-top: 160px;
+  text-align: center;
 }
 
-#lapNum{
-    display: inline-block;
-    color: white;
-    font-family: "SF-Pro";
-    font-size: 26px;
-    margin-top: 20px;
-    font-weight: bold;
-    text-align: center;
+#startStop {
+  background-color: var(--start-color);
+  color: rgb(0, 255, 0);
+  border: double 12px black;
+  margin-left: 350px;
 }
 
-li{
-    margin-top: 40px;
-    list-style-type: none;
+#resetLap {
+  background-color: rgba(153, 153, 153, 0.3);
+  color: var(--text-color);
+  border: double 12px black;
 }
 
-li:first-child{
-    margin-top: 0px;
+table {
+  font-size: 28px;
+  font-family: "SF-Pro";
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-color);
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+#lapNumber {
+  padding-left: 530px;
 }
