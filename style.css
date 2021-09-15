@@ -10,9 +10,10 @@
 
 body {
   background-color: black;
-  width: 700px;
-  height: 1300px;
-  border: solid 1px white;
+  max-width: 700px;
+  max-height: 1300px;
+  padding: 0;
+  margin: 0;
 }
 
 span {
@@ -56,15 +57,47 @@ button {
 }
 
 table {
+  border-collapse: collapse;
   font-size: 28px;
   font-family: "SF-Pro";
   font-weight: bold;
   font-variant-numeric: tabular-nums;
   color: var(--text-color);
-  margin-top: 30px;
-  margin-left: 20px;
 }
 
-#lapNumber {
-  padding-left: 530px;
+#table {
+  margin-top: 30px;
+  max-height: 550px;
+  overflow: auto;
+}
+
+td {
+  border: 0px solid transparent;
+  padding-left: 20px;
+  background-clip: padding-box;
+}
+
+tr > td + td {
+  border-left-width: 420px;
+}
+
+tr + tr > td {
+  border-top-width: 50px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(180, 180, 180);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(110, 110, 110);
 }

@@ -9,22 +9,23 @@
   </head>
 
   <body>
-    <p id="time">
-      <span id="minutes">00:</span><span id="seconds">00.</span
-      ><span id="milliseconds">00</span>
-    </p>
+    <div id="time">00:00.00</div>
 
     <div class="buttons">
       <button id="resetLap">Lap</button>
       <button id="startStop">Start</button>
     </div>
 
-    <table id="lapTable">
-      <tr>
-        <td id="lapNumber"></td>
-        <td id="lapTime"></td>
-      </tr>
-    </table>
+    <div id="table">
+      <table id="lapTable">
+        <tbody>
+          <tr>
+            <td id="lapNumber"></td>
+            <td id="lapTime"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <script src="script.js"></script>
   </body>
