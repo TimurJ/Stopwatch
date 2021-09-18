@@ -10,55 +10,52 @@
 
 body {
   background-color: black;
-  max-width: 700px;
-  max-height: 1300px;
   padding: 0;
   margin: 0;
 }
 
-span {
-  display: inline-block;
-}
-
-#time {
+#setTime {
   color: var(--text-color);
-  font-size: 140px;
+  font-size: 80px;
   font-family: "SF-Pro";
   font-variant-numeric: tabular-nums;
-  margin-top: 250px;
+  margin-top: 130px;
   text-align: center;
 }
 
 button {
-  font-size: 24px;
+  font-size: 16px;
   font-family: "SF-Pro";
   font-weight: bold;
   border-radius: 50%;
-  height: 145px;
-  width: 145px;
+  height: 85px;
+  width: 85px;
 }
 
 .buttons {
-  margin-top: 160px;
+  margin-top: 100px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
-#startStop {
+#startStopButton {
   background-color: var(--start-color);
   color: rgb(0, 255, 0);
-  border: double 12px black;
-  margin-left: 350px;
+  border: double 7px black;
+  margin-right: 15px;
 }
 
-#resetLap {
+#resetLapButton {
   background-color: rgba(153, 153, 153, 0.3);
   color: var(--text-color);
-  border: double 12px black;
+  border: double 7px black;
+  margin-left: 15px;
 }
 
 table {
   border-collapse: collapse;
-  font-size: 28px;
+  font-size: 16px;
   font-family: "SF-Pro";
   font-weight: bold;
   font-variant-numeric: tabular-nums;
@@ -66,8 +63,8 @@ table {
 }
 
 #table {
-  margin-top: 30px;
-  max-height: 550px;
+  margin-top: 18px;
+  max-height: 300px;
   overflow: auto;
 }
 
@@ -78,15 +75,15 @@ td {
 }
 
 tr > td + td {
-  border-left-width: 420px;
+  border-left-width: 200px;
 }
 
 tr + tr > td {
-  border-top-width: 50px;
+  border-top-width: 30px;
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 ::-webkit-scrollbar-track {
