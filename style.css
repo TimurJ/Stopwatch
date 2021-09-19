@@ -10,6 +10,7 @@
 
 body {
   background-color: black;
+  max-width: 370px;
   padding: 0;
   margin: 0;
 }
@@ -21,6 +22,7 @@ body {
   font-variant-numeric: tabular-nums;
   margin-top: 130px;
   text-align: center;
+  user-select: none;
 }
 
 button {
@@ -37,19 +39,42 @@ button {
   text-align: center;
   display: flex;
   justify-content: space-between;
+  user-select: none;
 }
 
-#startStopButton {
+#resetLapButton:active {
+  background-color: rgba(20, 20, 20, 0.5);
+}
+
+#startStopButton:active {
+  background-color: rgba(20, 20, 20, 0.5);
+}
+
+.startButton {
   background-color: var(--start-color);
   color: rgb(0, 255, 0);
-  border: double 7px black;
+  border: double 7.5px black;
   margin-right: 15px;
 }
 
-#resetLapButton {
+.stopButton {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: rgb(255, 0, 0);
+  border: double 7.5px black;
+  margin-right: 15px;
+}
+
+.initialLapButton {
+  background-color: rgba(153, 153, 153, 0.13);
+  color: rgba(255, 255, 255, 0.5);
+  border: double 7.5px black;
+  margin-left: 15px;
+}
+
+.resetLapButton {
   background-color: rgba(153, 153, 153, 0.3);
   color: var(--text-color);
-  border: double 7px black;
+  border: double 7.5px black;
   margin-left: 15px;
 }
 
@@ -60,26 +85,39 @@ table {
   font-weight: bold;
   font-variant-numeric: tabular-nums;
   color: var(--text-color);
+  user-select: none;
 }
 
 #table {
   margin-top: 18px;
+  margin-left: 15px;
   max-height: 300px;
   overflow: auto;
 }
 
 td {
-  border: 0px solid transparent;
-  padding-left: 20px;
-  background-clip: padding-box;
+  width: 68px;
+  height: 19px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 209px;
 }
 
-tr > td + td {
-  border-left-width: 200px;
+.fastestLap {
+  color: green;
 }
 
-tr + tr > td {
-  border-top-width: 30px;
+.slowestLap {
+  color: red;
+}
+
+td:first-child {
+  padding-left: 0;
+  margin-left: 15px;
+}
+
+tr {
+  border-top: 1px solid rgb(37, 37, 37);
 }
 
 ::-webkit-scrollbar {
@@ -87,14 +125,10 @@ tr + tr > td {
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 20px;
+  border-radius: 50px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(180, 180, 180);
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(110, 110, 110);
+  background: rgb(102, 102, 102);
+  border-radius: 50px;
 }
