@@ -144,8 +144,8 @@ const fastestSlowestLap = () => {
     if (fastestLap > lapTime) {
       slowestLap = fastestLap;
       fastestLap = lapTime;
-      lapTableRowOne.classList.add("fastestLap");
-      lapTableRowTwo.classList.add("slowestLap");
+      lapTableRowOne.classList.add("slowestLap");
+      lapTableRowTwo.classList.add("fastestLap");
     } else {
       slowestLap = lapTime;
       lapTableRowOne.classList.add("fastestLap");
