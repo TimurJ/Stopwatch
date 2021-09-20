@@ -4,13 +4,22 @@
 }
 
 :root {
-  --start-color: rgba(0, 255, 0, 0.2);
+  --start-button-color: rgba(0, 255, 0, 0.2);
+  --stop-button-color: rgba(255, 0, 0, 0.2);
+  --initial-lap-button-color: rgba(153, 153, 153, 0.13);
+  --initial-lap-text-color: rgba(255, 255, 255, 0.5);
+  --resetLap-button-color: rgba(153, 153, 153, 0.3);
+  --fastest-lap-color: green;
+  --slowest-lap-color: red;
+  --lap-border-color: rgb(37, 37, 37);
+  --scrollbar-color: rgb(102, 102, 102);
   --text-color: rgb(255, 255, 255);
+  --main-background-color: black;
+  --on-click-transition-color: rgba(20, 20, 20, 0.5);
 }
 
 body {
-  background-color: black;
-  max-width: 370px;
+  background-color: var(--main-background-color);
   padding: 0;
   margin: 0;
 }
@@ -43,36 +52,36 @@ button {
 }
 
 #resetLapButton:active {
-  background-color: rgba(20, 20, 20, 0.5);
+  background-color: var(--on-click-transition-color);
 }
 
 #startStopButton:active {
-  background-color: rgba(20, 20, 20, 0.5);
+  background-color: var(--on-click-transition-color);
 }
 
 .startButton {
-  background-color: var(--start-color);
+  background-color: var(--start-button-color);
   color: rgb(0, 255, 0);
   border: double 7.5px black;
   margin-right: 15px;
 }
 
 .stopButton {
-  background-color: rgba(255, 0, 0, 0.2);
+  background-color: var(--stop-button-color);
   color: rgb(255, 0, 0);
   border: double 7.5px black;
   margin-right: 15px;
 }
 
 .initialLapButton {
-  background-color: rgba(153, 153, 153, 0.13);
-  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--initial-lap-button-color);
+  color: var(--initial-lap-text-color);
   border: double 7.5px black;
   margin-left: 15px;
 }
 
 .resetLapButton {
-  background-color: rgba(153, 153, 153, 0.3);
+  background-color: var(--resetLap-button-color);
   color: var(--text-color);
   border: double 7.5px black;
   margin-left: 15px;
@@ -104,11 +113,11 @@ td {
 }
 
 .fastestLap {
-  color: green;
+  color: var(--fastest-lap-color);
 }
 
 .slowestLap {
-  color: red;
+  color: var(--slowest-lap-color);
 }
 
 td:first-child {
@@ -117,7 +126,7 @@ td:first-child {
 }
 
 tr {
-  border-top: 1px solid rgb(37, 37, 37);
+  border-top: 1px solid var(--lap-border-color);
 }
 
 ::-webkit-scrollbar {
@@ -129,6 +138,6 @@ tr {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(102, 102, 102);
+  background: var(--scrollbar-color);
   border-radius: 50px;
 }
